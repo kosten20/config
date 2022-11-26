@@ -83,6 +83,7 @@ set nocompatible
 let mapleader=","
 :set relativenumber
 :nnoremap <leader>\ :noh<return><esc>
+:au FocusLost * :wa
 
 "NerdTree
 
@@ -91,4 +92,5 @@ let mapleader=","
 
 "terminal
 
-:nnoremap ` :term bash<CR>
+:nnoremap ` <C-W>s<C-W>j:term bash<CR>
+:tnoremap <Esc> <C-\><C-N>
